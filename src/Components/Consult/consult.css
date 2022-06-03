@@ -1,0 +1,6 @@
+.container .consult-frame {
+    width: 450px;
+    height: 100%;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}

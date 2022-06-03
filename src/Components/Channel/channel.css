@@ -1,0 +1,215 @@
+.container .channels {
+    max-width: 320px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.container .channels::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+}
+
+.container .channels::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #535353;
+}
+
+.container .channels::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background: #ededed;
+}
+
+.container .channels .top {
+    position: relative;
+    width: 100%;
+    height: 96px;
+    padding: 29px;
+}
+
+.container .channels .top:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 80%;
+    height: 1px;
+    content: '';
+    background-color: var(--light);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.container .channels input {
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid var(--light);
+    background-color: #eceff1;
+    border-radius: 21px;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+}
+
+.container .channels input:focus {
+    outline: none;
+}
+
+.container .channels span.search {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin-left: 10px;
+    border: 1px solid var(--light);
+    background-color: var(--blue);
+    background-image: url("../../Common/img/name-type.png");
+    background-repeat: no-repeat;
+    background-position: top 12px left 14px;
+    border-radius: 50%;
+}
+
+.container .channels .people::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.container .channels .people {
+    -ms-overflow-style: none;
+}
+
+.container .channels .people {
+    overflow: -moz-scrollbars-none;
+}
+
+.container .channels .people {
+    margin: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container .channels .people .person {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px 16px;
+    cursor: pointer;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .channels .people .person:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 80%;
+    height: 1px;
+    content: '';
+    background-color: var(--light);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.container .channels .people .person img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+
+.container .channels .people .person-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 200px;
+}
+
+.container .channels .people .person .name {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.container .channels .people .person .name strong {
+    display: block;
+    width: 160px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--dark);
+    font-family: "Open Sans",sans-serif;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container .channels .people .person .name em {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 9px;
+    background: #ba0219;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.container .channels .people .person-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.container .channels .people .person .time {
+    font-size: 12px;
+    top: 16px;
+    right: 30%;
+    padding: 0 0 5px 5px;
+    color: var(--grey);
+    background-color: var(--white);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container .channels .people .person .preview {
+    font-size: 13px;
+    height: 16px;
+    display: inline-block;
+    width: 70%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--grey);
+}
+
+.container .channels .people .person.active,
+.container .channels .people .person:hover {
+    background-color: #e2dfff;
+}
+
+.container .channels .people .person.active span,
+.container .channels .people .person:hover span {
+    background: transparent;
+}
+
+.container .channels .people .person.active h3 strong,
+.container .channels .people .person:hover h3 strong {
+    color: #7b53ef;
+    background: transparent;
+}
+
+.container .channels .people .person.active:after,
+.container .channels .people .person:hover:after {
+    display: none;
+}
